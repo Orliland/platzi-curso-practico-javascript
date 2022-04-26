@@ -95,7 +95,7 @@ function selectFigure(figure) {
   for (let btn of buttons) {
     btn.classList.remove("selected");
   }
-
+  buttonToSelected.classList.add("selected");
   formToShow.classList.add("active");
   formToShow.classList.remove("deactive");
 }
