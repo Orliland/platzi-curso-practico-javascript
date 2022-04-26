@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porcentajes y descuentos | Curso Práctico de JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper wrapper__header">
+        <img src="./imgs/porcentaje.png" alt="" class="header__icon" />
+
+        <h1 class="header__title">Porcentajes y Descuentos</h1>
+        <p class="header__subtitle">
+          Este es el segundo taller del Curso Práctico de javaScript
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="wrapper">
+        <form class="form">
+          <h2 class="form__title">
+            Calcula el precio a pagar de tus productos con descuento
+          </h2>
+
+          <label class="label" for="inputPrice"
+            >Escribe el precio de tu producto</label
+          >
+          <input class="input" id="inputPrice" type="number" placeholder="$" />
+          <label class="label" for="inputDiscount"
+            >Escribe el descuento de tu producto</label
+          >
+          <input
+            class="input"
+            id="inputDiscount"
+            type="number"
+            placeholder="%"
+          />
+          <button
+            type="button"
+            class="button"
+            onclick="ejecutarPrecioConDescuento()"
+          >
+            Calcular el precio con descuento
+          </button>
+        </form>
+        <div id="resultP" class="card__result">
+          Precio Con Descuento: <span>$0.00</span>
+        </div>
+      </div>
+    </main>
+
+    <script src="./descuentos.js"></script>
+  </body>
+</html>

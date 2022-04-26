@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras Geométricas | Curso Práctico de JavaScript</title>
+    <title>Porcentajes y descuentos | Curso Práctico de JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper wrapper__header">
+        <img src="./imgs/shapes-solid.svg" class="header__icon" alt="" />
+        <h1 class="header__title">Figuras Geométricas</h1>
+        <p class="header__subtitle">
+          Este es el primer tarer del curso práctico de JavaScript
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <section class="section">
+          <h2 class="section__title">Calculadora de área y perímetro</h2>
+          <fieldset class="select">
+            <legend class="label">Cual es tu figura geométrica?</legend>
+            <ul class="select__list">
+              <li id="select__square" class="select__item selected">
+                <a href="#" onclick="selectFigure('square')">
+                  <img src="./imgs/square-solid.svg" alt="" />
+                </a>
+              </li>
+              <li id="select__triangle" class="select__item">
+                <a href="#" onclick="selectFigure('triangle')">
+                  <img src="./imgs/triangulo.png" alt="" />
+                </a>
+              </li>
+              <li id="select__circle" class="select__item">
+                <a href="#" onclick="selectFigure('circle')">
+                  <img src="./imgs/circle-solid.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </fieldset>
+          <form id="form__square" class="form active">
+            <label class="label" for="inputCuadrado">
+              Cuánto mide cada lado de tu cuadrado?
+            </label>
+            <input
+              class="input"
+              id="inputCuadrado"
+              type="number"
+              placeholder="cm"
+            />
+            <button
+              type="button"
+              class="button"
+              onclick="calcularPerimetroCuadrado()"
+            >
+              Calcular el perímetro
+            </button>
+            <button
+              type="button"
+              class="button"
+              onclick="calcularAreaCuadrado()"
+            >
+              Calcular el área
+            </button>
+          </form>
+          <form id="form__triangle" class="form deactive">
+            <label class="label" for="inputTriangulo1">
+              Cuánto mide cada lado de tu triangulo?
+            </label>
+            <input
+              class="input"
+              id="inputTriangulo1"
+              type="number"
+              placeholder="lado 1 (cm)"
+            />
+            <input
+              class="input"
+              id="inputTriangulo2"
+              type="number"
+              placeholder="lado 2 (cm)"
+            />
+            <input
+              class="input"
+              id="inputTriangulo3"
+              type="number"
+              placeholder="lado 3 (cm)"
+            />
+            <label class="label" for="inputTriangulo4">
+              Cuánto mide la altura de tu triangulo?
+            </label>
+            <input
+              class="input"
+              id="inputTriangulo4"
+              type="number"
+              placeholder="cm"
+            />
+            <button
+              class="button"
+              type="button"
+              onclick="calcularPerimetroTriangulo()"
+            >
+              Calcular el perímetro
+            </button>
+            <button
+              class="button"
+              type="button"
+              onclick="calcularAreaTriangulo()"
+            >
+              Calcular el área
+            </button>
+          </form>
+
+          <form id="form__circle" class="form deactive">
+            <label class="label" for="inputCirculo">
+              Cuánto mide el radio de tu circulo?
+            </label>
+            <input
+              class="input"
+              id="inputCirculo"
+              type="number"
+              placeholder="cm"
+            />
+            <button
+              class="button"
+              type="button"
+              onclick="calcularPerimetroCirculo()"
+            >
+              Calcular la circunferencia
+            </button>
+            <button
+              class="button"
+              type="button"
+              onclick="calcularAreaCirculo()"
+            >
+              Calcular el área
+            </button>
+          </form>
+          <div id="resultP" class="card__result">
+            Ejecute una operación para obtener el resultado
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./figuras.js"></script>
+  </body>
+</html>

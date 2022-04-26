@@ -1,0 +1,92 @@
+.section,
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form.active {
+  display: block;
+}
+
+.form.deactive {
+  display: none;
+}
+
+.section__title,
+.form__title {
+  margin-bottom: 32px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input {
+  width: calc(100% - 24px);
+  margin-top: 8px;
+  margin-bottom: 24px;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #eeeeee;
+  font-size: 18px;
+}
+
+.button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.select {
+  margin-bottom: 48px;
+}
+
+.select__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  filter: invert(0.8);
+}
+
+.select__item.selected {
+  filter: invert(1);
+}
+
+.select__item:hover {
+  animation-name: rotate;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+.select__item img {
+  width: 48px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0dge);
+  }
+  to {
+    transform: rotate(45deg);
+    filter: invert(1);
+  }
+}

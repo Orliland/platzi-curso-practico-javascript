@@ -1,0 +1,35 @@
+.wrapper__cards {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  text-align: center;
+}
+
+.card__link {
+  display: block;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.card__link:hover {
+  border: 1px solid black;
+}
+
+.card__icon {
+  width: 35px;
+}
+
+.card__result {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.card__result span {
+  font-weight: bold;
+  text-decoration: underline;
+}
